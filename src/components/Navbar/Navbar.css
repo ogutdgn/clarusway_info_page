@@ -1,0 +1,25 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #19324b;
+    color: white;
+}
+.navbar span{
+    color: purple;
+    cursor: pointer;
+    text-decoration: none;
+}
+.navbar h1{
+    margin-left: 30px;
+}
+.pages{
+    display: flex;
+    
+}
+.pages h1{
+    margin-right: 30px;
+}
+
+.navbar div h1:hover{
+    cursor: pointer;
+}
