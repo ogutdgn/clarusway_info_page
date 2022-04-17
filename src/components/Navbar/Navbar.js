@@ -40,7 +40,7 @@ const Navbar = () => {
     <div className='navbar'>
         <h1><a href="https://clarusway.com/"><span>Clarusway</span></a> Web Design</h1>
         <div className='pages'>
-          <h1 onClick={handleHome} ref={homeRef}>Home</h1>
+          <h1 onClick={handleHome} ref={homeRef} style={{color:"purple"}}>Home</h1>
           <h1 onClick={handleAbout} ref={aboutRef}>About</h1>
           <h1 onClick={handleServices} ref={serviceRef}>Services</h1>
         </div>
