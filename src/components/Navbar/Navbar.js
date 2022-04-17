@@ -11,19 +11,38 @@ const Navbar = () => {
   // console.log(window.location.pathname);
   // console.log(homeRef.current);
 
+  // homeRef.current.style.color = "white"
+  // aboutRef.current.style.color = "white"
+  // serviceRef.current.style.color = "white"
 
+  const status = () => {
+    window.location.pathname == "/" ? homeRef.current.style.color = "purple" : homeRef.current.style.color = "white"
+    window.location.pathname == "/about" ? aboutRef.current.style.color = "purple" : aboutRef.current.style.color = "white"
+    window.location.pathname == "/services" ? serviceRef.current.style.color = "purple" : serviceRef.current.style.color = "white"
+  }
 
-  window.location.pathname == "/" ? homeRef.current.style.color = "purple" : homeRef.current.style.color = "white"
-  window.location.pathname == "/about" ? aboutRef.current.style.color = "purple" : aboutRef.current.style.color = "white"
-  window.location.pathname == "/services" ? serviceRef.current.style.color = "purple" : serviceRef.current.style.color = "white"
+  const handleHome = () => {
+    navigate("/");
+    status();
+  }
+
+  const handleAbout = () => {
+    navigate("/about");
+    status();
+  }
+
+  const handleServices = () => {
+    navigate("/services");
+    status();
+  }
 
   return (
     <div className='navbar'>
         <h1><a href="https://clarusway.com/"><span>Clarusway</span></a> Web Design</h1>
         <div className='pages'>
-          <h1 onClick={() => navigate("/")} ref={homeRef}>Home</h1>
-          <h1 onClick={() => navigate("/about")} ref={aboutRef}>About</h1>
-          <h1 onClick={() => navigate("/services")} ref={serviceRef}>Services</h1>
+          <h1 onClick={handleHome} ref={homeRef}>Home</h1>
+          <h1 onClick={handleAbout} ref={aboutRef}>About</h1>
+          <h1 onClick={handleServices} ref={serviceRef}>Services</h1>
         </div>
     </div>
   )
